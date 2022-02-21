@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     Vector2 movement;
     public float speed;
     public Rigidbody2D playerRb;
+    internal bool right = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,5 +23,20 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         playerRb.MovePosition(playerRb.position + movement * speed * Time.fixedDeltaTime); //player moves the the position dictated by movement
+        if (movement.x < 0 && right) //if the player is moving left but the sprite is facing right
+        {
+            Flip();
+        }
+        else if (movement.x > 0 && !right) //if the player is moving right but the sprite is facing left
+        {
+            Flip();
+        }
+    }
+    private void Flip() //used to flip the sprite
+    {
+        right = !right;
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
     }
 }
