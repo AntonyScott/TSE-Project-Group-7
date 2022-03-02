@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public float speed;
     public Rigidbody2D playerRb;
     internal bool right = true;
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,8 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         playerRb.MovePosition(playerRb.position + movement * speed * Time.fixedDeltaTime); //player moves the the position dictated by movement
+        animator.SetFloat("Speed", movement.x);
+
         if (movement.x < 0 && right) //if the player is moving left but the sprite is facing right
         {
             Flip();
