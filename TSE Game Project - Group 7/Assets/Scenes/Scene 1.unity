@@ -1446,6 +1446,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3156862305204174015, guid: 70052aade3307134f92e2720f014af83, type: 3}
   m_PrefabInstance: {fileID: 3156862304578901914}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1520598461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520598460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b21f05ab6a37f84aa92e1214cdd357a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 5
+  rb: {fileID: 1520598465}
+  animator: {fileID: 184640544}
 --- !u!61 &1520598463
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1523,6 +1538,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &1520598465 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 3156862305204174002, guid: 70052aade3307134f92e2720f014af83, type: 3}
+  m_PrefabInstance: {fileID: 3156862304578901914}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1922845782
 GameObject:
   m_ObjectHideFlags: 0
@@ -3956,14 +3976,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3156862305204174013, guid: 70052aade3307134f92e2720f014af83, type: 3}
+    - target: {fileID: 0}
       propertyPath: speed
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 3156862305204174013, guid: 70052aade3307134f92e2720f014af83, type: 3}
+    - target: {fileID: 0}
       propertyPath: animator
       value: 
       objectReference: {fileID: 184640544}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3156862305204174015, guid: 70052aade3307134f92e2720f014af83, type: 3}
       propertyPath: m_Name
       value: Player
