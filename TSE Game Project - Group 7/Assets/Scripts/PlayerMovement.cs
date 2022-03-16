@@ -21,12 +21,14 @@ public class PlayerMovement : MonoBehaviour
         //animator.SetFloat("Horizontal", movement.x);
         //animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
+        
     }
 
     void FixedUpdate()
     {
         //movement
         rb.MovePosition(rb.position + movement.normalized * movementSpeed * Time.fixedDeltaTime);
+        
 
         if (movement.x < 0 && right) //if the player is moving left but the sprite is facing right
         {
@@ -43,5 +45,6 @@ public class PlayerMovement : MonoBehaviour
         Vector3 scale = transform.localScale;
         scale.x *= -1;
         transform.localScale = scale;
+        FindObjectOfType<AudioManager>().Play("Player_Footsteps");
     }
 }
