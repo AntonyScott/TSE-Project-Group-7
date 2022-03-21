@@ -8,9 +8,12 @@ public class AlienBehaviour : MonoBehaviour
     public Transform alien;
     public float speed = 200f;
     public float nextWaypointDistance = 3f;
+    public Transform fire;
+    public GameObject bullet;
     Path currentPath;
     int currentWaypoint = 0;
     bool end = false;
+    //private float timer = 0.5f;
     Seeker seeker;
     Rigidbody2D rb;
     // Start is called before the first frame update
@@ -23,7 +26,11 @@ public class AlienBehaviour : MonoBehaviour
     void UpdatePath()
     {
         float stoppingDistance = Vector3.Distance(rb.position, target.position); //range where the enemy will stop and shoot
-        if (stoppingDistance <= 3.0f) return; //UpdatePath will not be initiated if it's in stopping distance
+        if (stoppingDistance <= 3.0f)
+        {
+            Shoot();
+            return; //UpdatePath will not be initiated if it's in stopping distance
+        }
         if (seeker.IsDone()) seeker.StartPath(rb.position, target.position, PathCompleted); //otherwise a path is created for the alien to follow
     }
     void PathCompleted(Path p)
@@ -51,5 +58,9 @@ public class AlienBehaviour : MonoBehaviour
         if (distance < nextWaypointDistance) currentWaypoint++;
         if (rb.velocity.x >= 0.01f) alien.localScale = new Vector3(1f, 1f, 1f);
         else if (rb.velocity.x <= 0.01f) alien.localScale = new Vector3(-1f, 1f, 1f); //how the enemy follows the player
+    }
+    void Shoot()
+    {
+        Instantiate(bullet, fire.position, fire.rotation);
     }
 }
