@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     internal bool right = true;
-    public int health = 100;
     Vector2 movement;
 
     void Update()
@@ -21,7 +20,6 @@ public class PlayerMovement : MonoBehaviour
         //animator.SetFloat("Horizontal", movement.x);
         //animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
-        if (health <= 0) Debug.Log("I'm dead!");
     }
 
     void FixedUpdate()
@@ -47,12 +45,5 @@ public class PlayerMovement : MonoBehaviour
         transform.localScale = scale;
         FindObjectOfType<AudioManager>().Play("Player_Footsteps");
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Enemy")
-        {
-            health = health - 10;
-            Destroy(collision.gameObject);
-        }
-    }
+    
 }
