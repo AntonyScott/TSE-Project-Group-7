@@ -21,19 +21,35 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(20);
-        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.tag == "HealthPickup")
+        {
+            GainHealth(30);
+            Destroy(collision.gameObject);
+        }
+
         if (collision.tag == "Enemy")
         {
             TakeDamage(10);
             Destroy(collision.gameObject);
         }
+    }
+
+    void GainHealth(int health)
+    {
+        currentHealth += health;
+
+        if (currentHealth >= maxHealth)
+        {
+            currentHealth = maxHealth;
+            
+        }
+
+        healthBar.Sethealth(currentHealth);
     }
 
     void TakeDamage(int damage)
