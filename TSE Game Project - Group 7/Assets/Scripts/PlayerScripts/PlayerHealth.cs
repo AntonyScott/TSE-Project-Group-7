@@ -26,6 +26,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+<<<<<<< Updated upstream
         if (collision.tag == "HealthPickup")
         {
             GainHealth(30);
@@ -33,6 +34,9 @@ public class PlayerHealth : MonoBehaviour
         }
 
         if (collision.tag == "Enemy")
+=======
+        if (collision.tag == "EnemyBullet")
+>>>>>>> Stashed changes
         {
             TakeDamage(10);
             Destroy(collision.gameObject);
