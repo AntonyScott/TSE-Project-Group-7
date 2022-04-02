@@ -3,15 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Enemy
-<<<<<<< Updated upstream
-  - HealthPickup
-=======
-  - EnemyBullet
-  - PlayerBullet
-  - Walls
->>>>>>> Stashed changes
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -19,10 +11,10 @@ TagManager:
   - 
   - Water
   - UI
-  - Player
-  - Walls
-  - Enemy
-  - Post Processing
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
