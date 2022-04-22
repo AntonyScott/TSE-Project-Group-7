@@ -234,6 +234,24 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Shoot
+    clip: {fileID: 8300000, guid: 48d519beaeba4c2458e700358f051825, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Hit
+    clip: {fileID: 8300000, guid: ccb10163a977ddc4c8db80a326a13733, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PowerUp
+    clip: {fileID: 8300000, guid: b39b0b34e58f530418054a31d9ed1a99, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &304807234
 Transform:
   m_ObjectHideFlags: 0

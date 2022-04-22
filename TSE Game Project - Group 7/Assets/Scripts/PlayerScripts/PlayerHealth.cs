@@ -30,6 +30,7 @@ public class PlayerHealth : MonoBehaviour
         {
             GainHealth(30);
             Destroy(collision.gameObject);
+            FindObjectOfType<AudioManager>().Play("PowerUp");
         }
 
         //if (collision.tag == "Enemy")
@@ -58,6 +59,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= damage;
 
         healthBar.Sethealth(currentHealth);
+        FindObjectOfType<AudioManager>().Play("Hit");
 
         if (currentHealth == 0)
         {
