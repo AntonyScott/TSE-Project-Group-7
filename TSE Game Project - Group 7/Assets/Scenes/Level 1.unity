@@ -252,6 +252,12 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: BG_Music
+    clip: {fileID: 8300000, guid: e99acb5824b91c44699c8026e9ebe575, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
 --- !u!4 &304807234
 Transform:
   m_ObjectHideFlags: 0
@@ -342,7 +348,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -4693580379028274169, guid: 38b4ae0c23be2624383d32b61ae91443, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
