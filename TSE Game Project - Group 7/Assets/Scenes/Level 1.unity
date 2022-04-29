@@ -198,80 +198,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 84318610}
   m_CullTransparentMesh: 1
---- !u!1 &304807232
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 304807234}
-  - component: {fileID: 304807233}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &304807233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 304807232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5deb28fde180fce429c0c414c5c871d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: Player_Footsteps
-    clip: {fileID: 8300000, guid: 01103accd39577d41800b8f0ed77bc99, type: 3}
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Shoot
-    clip: {fileID: 8300000, guid: 48d519beaeba4c2458e700358f051825, type: 3}
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Hit
-    clip: {fileID: 8300000, guid: ccb10163a977ddc4c8db80a326a13733, type: 3}
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: PowerUp
-    clip: {fileID: 8300000, guid: b39b0b34e58f530418054a31d9ed1a99, type: 3}
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: BG_Music
-    clip: {fileID: 8300000, guid: e99acb5824b91c44699c8026e9ebe575, type: 3}
-    volume: 0.5
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
---- !u!4 &304807234
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 304807232}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &447580015
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,7 +294,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 447580015}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.56, y: 3.46, z: 0}
+  m_LocalPosition: {x: 16.497, y: 4.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1755,16 +1681,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 16, y: 4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 17, y: 4, z: 0}
     second:
       serializedVersion: 2
@@ -1819,7 +1735,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 419605d1e3061054daac296704f24d16, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 3a8fca2c7804def439e87344432bf5e3, type: 2}
-  - m_RefCount: 30
+  - m_RefCount: 29
     m_Data: {fileID: 11400000, guid: 5afc069073f26344d8306f07ab3deb2d, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 27ddd84b08972294fae59df83c940b5c, type: 2}
@@ -1846,7 +1762,7 @@ Tilemap:
     m_Data: {fileID: 923242465540532106, guid: 847c59fe17485ad42a619c13bd4db7bd, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 4987971441728776048, guid: 847c59fe17485ad42a619c13bd4db7bd, type: 3}
-  - m_RefCount: 30
+  - m_RefCount: 29
     m_Data: {fileID: 4455742111740492130, guid: 847c59fe17485ad42a619c13bd4db7bd, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -6004281211965293163, guid: 847c59fe17485ad42a619c13bd4db7bd, type: 3}
@@ -1861,7 +1777,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 5462040446442670737, guid: 847c59fe17485ad42a619c13bd4db7bd, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 94
+  - m_RefCount: 93
     m_Data:
       e00: 1
       e01: 0
@@ -1880,7 +1796,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 94
+  - m_RefCount: 93
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -1971,7 +1887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -2101,7 +2017,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1057847406
 GameObject:
@@ -3034,7 +2950,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1659519714
 GameObject:
@@ -3276,7 +3192,7 @@ Transform:
   m_Children:
   - {fileID: 1659519715}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1773513801 stripped
 Transform:
@@ -5727,7 +5643,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5531403494174666882, guid: 55c8f16a7713bf54ebce3fdbad8e87ad, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5531403494174666882, guid: 55c8f16a7713bf54ebce3fdbad8e87ad, type: 3}
       propertyPath: m_LocalPosition.x
