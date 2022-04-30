@@ -16,4 +16,12 @@ public class SceneLoad : MonoBehaviour
         Application.Quit();
 
     }
+    public void LoadCredits() 
+    {
+        SceneManager.LoadScene("Credits");
+    }
+    public void Back()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }

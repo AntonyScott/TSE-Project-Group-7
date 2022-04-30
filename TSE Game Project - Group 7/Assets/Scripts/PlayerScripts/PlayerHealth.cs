@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
 
@@ -21,7 +21,6 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -30,6 +29,7 @@ public class PlayerHealth : MonoBehaviour
         {
             GainHealth(30);
             Destroy(collision.gameObject);
+            FindObjectOfType<AudioManager>().Play("PowerUp");
         }
 
         //if (collision.tag == "Enemy")
@@ -58,10 +58,8 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= damage;
 
         healthBar.Sethealth(currentHealth);
+        FindObjectOfType<AudioManager>().Play("Hit");
 
-        if (currentHealth == 0)
-        {
-            Destroy(gameObject);
-        }
+        if (currentHealth <= 0) SceneManager.LoadScene("GameOver");
     }
 }
