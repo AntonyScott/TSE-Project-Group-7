@@ -32,10 +32,10 @@ public class AudioManager : MonoBehaviour
         //DontDestroyOnLoad(gameObject);
     }
 
-    void Start()
-    {
+    //void Start()
+    //{
 
-    }
+    //}
 
     void Update()
     {
