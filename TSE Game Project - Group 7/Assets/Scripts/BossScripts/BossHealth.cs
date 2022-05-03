@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour
+public class BossHealth : MonoBehaviour
 {
-
-    public int maxHealth = 100;
+    public int maxHealth = 200;
     public int currentHealth;
+
+    public BossHealthBar healthBar;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +33,7 @@ public class EnemyHealth : MonoBehaviour
     {
         currentHealth -= damage;
 
+        healthBar.Sethealth(currentHealth);
         FindObjectOfType<AudioManager>().Play("Hit");
 
         if (currentHealth <= 0)
@@ -40,3 +42,4 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 }
+
