@@ -10,7 +10,7 @@ public class BulletController : MonoBehaviour
     Vector3 direction;
     void Start()
     {
-        
+        Destroy(this.gameObject, 1.5f);
         player = GameObject.Find("Player");
         direction = (player.transform.position - transform.position).normalized;
     }

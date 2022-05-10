@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 7720315017812886320}
   - component: {fileID: 7720315017812886321}
   - component: {fileID: 7720315017812886324}
+  - component: {fileID: 1687436184}
   m_Layer: 6
   m_Name: Placeholder
   m_TagString: Enemy
@@ -156,10 +157,10 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 3
+  m_LinearDrag: 2.5
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 315aba4dee432294b8e4c52b3b352b32, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -180,8 +181,8 @@ MonoBehaviour:
   alien: {fileID: 7720315017812886325}
   speed: 200
   nextWaypointDistance: 3
-  fire: {fileID: 0}
-  bullet: {fileID: 0}
+  fire: {fileID: 6940373835544875444}
+  bullet: {fileID: 5531403494174666886, guid: 55c8f16a7713bf54ebce3fdbad8e87ad, type: 3}
 --- !u!114 &7720315017812886324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,3 +211,17 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
+--- !u!114 &1687436184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7720315017812886322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1332a855e861fb84d8f2bad1e75b07dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0

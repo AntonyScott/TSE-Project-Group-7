@@ -14,11 +14,24 @@ public class EnemyBullet : MonoBehaviour
         player = GameObject.Find("Player");
         bulletRb = GetComponent<Rigidbody2D>();
         direction = (player.transform.position - transform.position).normalized;
+        Destroy(this.gameObject, 3);
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.position += direction * speed * Time.deltaTime; //bullet moves towards player
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            Destroy(this.gameObject);
+        }
+        else if (collision.tag == "Walls")
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
