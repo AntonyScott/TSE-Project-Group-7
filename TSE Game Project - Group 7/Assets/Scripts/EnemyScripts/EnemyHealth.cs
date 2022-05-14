@@ -1,16 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class EnemyHealth : MonoBehaviour
 {
 
     public int maxHealth = 100;
     public int currentHealth;
-
+    public GameObject healthPickUp;
+    bool healthSpawn;
+    
     // Start is called before the first frame update
     void Start()
     {
+        healthSpawn = Random.value > 0.5f;
+        Debug.Log(healthSpawn);
         currentHealth = maxHealth;
     }
 
@@ -36,6 +39,7 @@ public class EnemyHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            if (healthSpawn) Instantiate(healthPickUp, this.transform.position, this.transform.rotation);
             Destroy(gameObject);
         }
     }
