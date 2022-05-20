@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 7720315017812886324}
   - component: {fileID: 1687436184}
   m_Layer: 6
-  m_Name: Placeholder
+  m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b498fe00b71f45c4b86317b260c3450e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 3156862305204174012, guid: 70052aade3307134f92e2720f014af83, type: 3}
   alien: {fileID: 7720315017812886325}
   speed: 200
   nextWaypointDistance: 3
