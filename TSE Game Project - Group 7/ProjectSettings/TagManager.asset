@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - HealthPickup
   - EnemyBullet
+  - SpeedPickup
   layers:
   - Default
   - TransparentFX

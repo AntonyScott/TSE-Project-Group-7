@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //movement
         rb.MovePosition(rb.position + movement.normalized * movementSpeed * Time.fixedDeltaTime);
-        
+
 
         if (movement.x < 0 && right) //if the player is moving left but the sprite is facing right
         {
@@ -45,5 +45,24 @@ public class PlayerMovement : MonoBehaviour
         transform.localScale = scale;
         FindObjectOfType<AudioManager>().Play("Player_Footsteps");
     }
-    
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.tag == "SpeedPickup")
+        {
+            movementSpeed = 10;
+            Destroy(collision.gameObject);
+            FindObjectOfType<AudioManager>().Play("PowerUp");
+            StartCoroutine(StopSpeedUp());
+        }
+
+        IEnumerator StopSpeedUp()
+        {
+            yield return new WaitForSeconds(2.5f); // the number corresponds to the number of seconds the speed up will be applied
+            movementSpeed = 5f; // back to normal !
+
+        }
+
+    }
 }
