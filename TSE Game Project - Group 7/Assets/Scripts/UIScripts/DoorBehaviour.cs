@@ -6,11 +6,15 @@ public class DoorBehaviour : MonoBehaviour
 {
     BoxCollider2D doorCollider;
     GameObject[] enemiesInScene;
+    Animator animatorOn;
     // Start is called before the first frame update
     void Start()
     {
         doorCollider = gameObject.GetComponent<BoxCollider2D>();
         doorCollider.isTrigger = false;
+        animatorOn = gameObject.GetComponent<Animator>();
+        animatorOn.enabled = false;
+
     }
 
     // Update is called once per frame
@@ -18,7 +22,11 @@ public class DoorBehaviour : MonoBehaviour
     {
         enemiesInScene = GameObject.FindGameObjectsWithTag("Enemy");
         Debug.Log(enemiesInScene.Length);
-        if (enemiesInScene.Length == 0) doorCollider.isTrigger = true;
+        if (enemiesInScene.Length == 0)
+        {
+            doorCollider.isTrigger = true;
+            animatorOn.enabled = true;
+        }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
