@@ -49,20 +49,41 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
+        // ++ speed power up
         if (collision.tag == "SpeedPickup")
         {
-            movementSpeed = 10;
+            movementSpeed = 7.5f;
             Destroy(collision.gameObject);
             FindObjectOfType<AudioManager>().Play("PowerUp");
             StartCoroutine(StopSpeedUp());
         }
 
+        // -- speed power up
+        if (collision.tag == "ReverseSpeed")
+        {
+            movementSpeed = 2.5f;
+            Destroy(collision.gameObject);
+            FindObjectOfType<AudioManager>().Play("ReversePick");
+            StartCoroutine(StopSpeedUp());
+        }
+
+
+        // coroutine for reverting speed to normal
         IEnumerator StopSpeedUp()
         {
             yield return new WaitForSeconds(2.5f); // the number corresponds to the number of seconds the speed up will be applied
             movementSpeed = 5f; // back to normal !
 
         }
+
+
+
+
+
+
+
+
+
 
     }
 }
