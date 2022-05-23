@@ -2832,8 +2832,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a46db6769a02b34da9e628a15803d7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRadius: 2
-  time: 2
+  spawnRadius: 2.5
+  time: 2.5
   enemies:
   - {fileID: 1260048965}
   - {fileID: 1260048965}
