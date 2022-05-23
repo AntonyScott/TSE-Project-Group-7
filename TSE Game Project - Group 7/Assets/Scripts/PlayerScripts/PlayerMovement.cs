@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float movementSpeed = 3f;
+    public float movementSpeed = 5f;
 
     public Rigidbody2D rb;
     public Animator animator;
@@ -61,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
         // -- speed power up
         if (collision.tag == "ReverseSpeed")
         {
-            movementSpeed = 2f;
+            movementSpeed = 2.5f;
             Destroy(collision.gameObject);
             FindObjectOfType<AudioManager>().Play("ReversePick");
             StartCoroutine(StopSpeedUp());
